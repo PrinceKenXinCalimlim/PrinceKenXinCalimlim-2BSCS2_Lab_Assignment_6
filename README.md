@@ -38,7 +38,7 @@
       // Simulate sending email notification
       System.out.println("Email notification sent to: " + email);
     }
-  }
+    }
   
     public class OrderTest {
   
