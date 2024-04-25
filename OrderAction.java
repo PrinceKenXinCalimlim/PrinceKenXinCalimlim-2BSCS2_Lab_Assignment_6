@@ -1,7 +1,7 @@
-public class OrderAction implements Orderable, Generatable, Sendable {
+public class OrderAction implements Orderable, Generatable {
 
     @Override
-    public void calculateTotal(double price, int quantity){
+    public void calculateTotal(double price, int quantity) {
         double total = price * quantity;
         System.out.println("Order total: $" + total);
     }
@@ -11,17 +11,19 @@ public class OrderAction implements Orderable, Generatable, Sendable {
         // Simulate placing order in a system
         System.out.println("Order placed for " + customerName + " at " + address);
     }
-  
+
     @Override
     public void generateInvoice(String fileName) {
         // Simulate generating invoice file
         System.out.println("Invoice generated: " + fileName);
     }
-  
+}
+
+class NotificationSender implements Sendable {
+
     @Override
     public void sendEmailNotification(String email) {
         // Simulate sending email notification
         System.out.println("Email notification sent to: " + email);
     }
-    
 }

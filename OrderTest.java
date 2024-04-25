@@ -9,8 +9,7 @@ public class OrderTest {
         Generatable generate = new OrderAction();
         generate.generateInvoice("order_123.pdf");
 
-        Sendable send = new OrderAction();
+        Sendable send = new NotificationSender();
         send.sendEmailNotification("johndoe@example.com");
-
     }
-  }
+}
